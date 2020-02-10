@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #212121;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container-elements {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#top {
+    flex: 3;
+    align-items: flex-end;
+}
+
+#logo {
+    height: 50%;
+}
+
+#bottom {
+    flex: 2;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#bottom i {
+    text-decoration: none;
+    color: black;
+}
