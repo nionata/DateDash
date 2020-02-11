@@ -13,12 +13,12 @@ body {
     width: 100vw;
 
     /* animation-name: color-fade;
-    animation-duration: 7.5s;
+    animation-duration: 10s;
     animation-iteration-count: infinite; */
 
-    background: linear-gradient(217deg,whitesmoke, #95d8ff, #f1a0ff, whitesmoke);
+    background: linear-gradient(217deg, whitesmoke, #95d8ff, #f1a0ff, whitesmoke);
     background-size: 400% 400%;
-    animation: gradient-scroll 10s ease infinite;
+    animation: gradient-scroll 5s ease-in-out infinite;
 
 }
 
