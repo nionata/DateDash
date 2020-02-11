@@ -9,9 +9,31 @@ body {
 #container {
     display: flex;
     flex-direction: column;
-    background-color: whitesmoke;
     height: 100vh;
     width: 100vw;
+
+    /* animation-name: color-fade;
+    animation-duration: 7.5s;
+    animation-iteration-count: infinite; */
+
+    background: linear-gradient(217deg,whitesmoke, #95d8ff, #f1a0ff, whitesmoke);
+    background-size: 400% 400%;
+    animation: gradient-scroll 10s ease infinite;
+
+}
+
+@keyframes color-fade {
+    0% {background-color:whitesmoke;}
+    25% {background-color: rgb(252, 188, 198);}
+    50% {background-color: rgb(83, 83, 83);}
+    75% {background-color: rgb(193, 238, 253);}
+    100% {background-color:whitesmoke;}
+}
+
+@keyframes gradient-scroll {
+    0%{background-position:94% 0%}
+    50%{background-position:7% 100%}
+    100%{background-position:94% 0%}
 }
 
 .container-elements {
