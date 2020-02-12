@@ -20,7 +20,7 @@ body {
 
     background: linear-gradient(217deg, whitesmoke, #95d8ff, #f1a0ff, whitesmoke);
     background-size: 400% 400%;
-    animation: gradient-scroll 5s ease-in-out infinite;
+    animation: gradient-scroll 10s ease-in-out infinite;
 
 }
 
