@@ -6,6 +6,7 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     </head>
     <body>
         <div id="container">
@@ -32,5 +33,10 @@
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
       });
+
+      window.addEventListener("ontouchend", function (e) {
+        e.preventDefault();
+      });
+      screen.orientation.lock('portrait')
     </script>
 </html>
