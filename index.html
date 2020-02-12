@@ -6,7 +6,6 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     </head>
     <body>
         <div id="container">
@@ -22,21 +21,21 @@
         </div>
     </body>
     <script>
-      // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-      let vh = window.innerHeight * 0.01;
-      // Then we set the value in the --vh custom property to the root of the document
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
+        // Set a prop for mobile height calc
+        function setHeight() {
+          let vh = window.innerHeight * 0.01
+          document.documentElement.style.setProperty('--vh', `${vh}px`)
+        }
 
-      // We listen to the resize event
-      window.addEventListener('resize', () => {
-        // We execute the same script as before
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-      });
+        // Resize on load and onchange
+        setHeight()
+        window.addEventListener('resize', () => {
+          setHeight()
+        })
 
-      window.addEventListener("ontouchend", function (e) {
-        e.preventDefault();
-      });
-      screen.orientation.lock('portrait')
-    </script>
+        // Prevent scroll on mobile
+        window.addEventListener("ontouchend", function (e) {
+          e.preventDefault()
+        })
+     </script>
 </html>
