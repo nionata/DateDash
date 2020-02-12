@@ -48,7 +48,9 @@ body {
 }
 
 #logo {
-    height: 50%;
+    height: auto;
+    width: auto;
+    max-width: 80%;
 }
 
 #bottom {
